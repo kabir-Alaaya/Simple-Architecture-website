@@ -16,7 +16,7 @@ h3{
 .header{
     width: 100%;
     min-height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(./img/low-angle-shot-modern-business-building-touching-clear-sky.jpg);
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(./low-angle-shot-modern-business-building-touching-clear-sky.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
