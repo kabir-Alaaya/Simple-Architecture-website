@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
 :root {
+    --font-family: "Roboto", sans-serf;
     --primary: #B78D65;
     --light: #F8F8F8;
     --dark: #252525;
+    --transition: 0.3s;
+    --bold-font: 700;
 }
 
 h1 {
@@ -13,7 +18,7 @@ h3{
     text-align: center;
     margin: 10px 0;
 }
-.header{
+header{
     width: 100%;
     min-height: 100vh;
     background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(low-angle-shot-modern-business-building-touching-clear-sky.jpg);
@@ -24,64 +29,68 @@ h3{
 *{
     margin: 0;
     padding:0;
-    font-family: sans-serif;
-}
-.nav {
-     
-    display: flex;
-    padding: 2%  6%;
-    justify-content: space-between;
-    align-items: center;
+    font-family:var(--font-family);
+    box-sizing: border-box;
 }
 
-.navbar{
-    flex: 1;
-    text-align: right;
-    padding-right:20px;
-    position: relative;
-    
-}
+ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--light);
+  }
+  
+  nav {
+    top: 0 ;
+    left:  0 ;
+    z-index: 1 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+nav a {
+    color: var(--primary);
+    transition: var(--transition);
+  }
+  nav a:hover {
+    color: var(--light);
+    border-bottom: 2px solid var(--primary);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+  
+  nav ul li {
+    font-weight: var(--bold-font);
+  }
+  .burger-menu {
+    color: var(--light);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display:none;
+  }
+
 .logo {
-    width: 80px;
-    height: 70px;
-    margin: 10px 0 0 20px;
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
     cursor: pointer;
 }
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin:  10px;
-    
 
-}
-.navbar ul li a {
-    text-decoration: none;
-    color:var(--light);
-    font-weight: 400;
-    font-family:  "Font Awesome 5";
-    
-}
-.navbar ul li a:hover{
-    color: var(--primary);
-    transition: 0.7s;
-}
-.navbar ul li::after {
-    content: '';
-    height: 2px;
-    width: 0;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    background: rgba(224, 224, 218, 0.685);
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{
-    width: 100%;
-}
-.navbar span{
-    color: var(--primary);
-
-}
 .text-content {
      width: 70%;
      margin: 0  5px 0  40px;
