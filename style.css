@@ -20,8 +20,7 @@ h3{
 }
 header{
     width: 100%;
-    min-height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(low-angle-shot-modern-business-building-touching-clear-sky.jpg);
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(./low-angle-shot-modern-business-building-touching-clear-sky-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -39,11 +38,15 @@ ul {
   
   a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--primary);
   }
   
   a:hover {
     color: var(--light);
+  }
+  body {
+    font-family: var(--font-family);
+   
   }
   
   nav {
@@ -77,7 +80,7 @@ nav a {
   }
   .burger-menu {
     color: var(--light);
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -92,16 +95,19 @@ nav a {
 }
 
 .text-content {
-     width: 70%;
-     margin: 0  5px 0  40px;
-     text-align:left;
-     padding-bottom: 20px;
-     height: 80vh;
-     padding-top: 60px;
+     width: 80%;
+     margin: auto;
+     text-align:center;
+     padding: 2rem;
+     
+   
+     
 }
 .col-text1 {
-    color:var(--light);
+     font-size: medium;
+    color:var(--primary);
     padding-top: 20px;
+    text-align: center;
 }
 .btn {
     margin-top: 30px ;
@@ -165,7 +171,34 @@ p{
 
 
 /*----------Media Queries---------------------------*/
-@media(max-width:700px) {
+@media screen and (max-width: 720px)  {
+    
+    nav ul {
+        position:fixed;
+        background-color:transparent;
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: right;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+      }
+    
+    .burger-menu {
+        display: block;
+      }
+    
+     nav ul.show {
+        transform: translateX(0);
+      }
+    
+    
+    
+    
+    
+    
+    
     h1 {
         font-size: 30px;
     }
@@ -174,16 +207,7 @@ p{
        margin: 0 0 0 20px;
     }
     
-    .navbar {
-        position: absolute;
-        background: orange;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-      } 
+    
     .facts {
         display:block ;
     }
